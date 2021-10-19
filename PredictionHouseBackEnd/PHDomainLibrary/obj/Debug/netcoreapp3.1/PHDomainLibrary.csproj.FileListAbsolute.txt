@@ -1,0 +1,8 @@
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PHDomainLibrary\bin\Debug\netcoreapp3.1\PHDomainLibrary.deps.json
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PHDomainLibrary\bin\Debug\netcoreapp3.1\PHDomainLibrary.dll
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PHDomainLibrary\bin\Debug\netcoreapp3.1\PHDomainLibrary.pdb
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PHDomainLibrary\obj\Debug\netcoreapp3.1\PHDomainLibrary.AssemblyInfoInputs.cache
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PHDomainLibrary\obj\Debug\netcoreapp3.1\PHDomainLibrary.AssemblyInfo.cs
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PHDomainLibrary\obj\Debug\netcoreapp3.1\PHDomainLibrary.csproj.CoreCompileInputs.cache
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PHDomainLibrary\obj\Debug\netcoreapp3.1\PHDomainLibrary.dll
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PHDomainLibrary\obj\Debug\netcoreapp3.1\PHDomainLibrary.pdb

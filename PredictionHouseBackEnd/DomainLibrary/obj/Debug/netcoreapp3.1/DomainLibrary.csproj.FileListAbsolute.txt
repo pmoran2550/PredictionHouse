@@ -1,0 +1,9 @@
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\DomainLibrary\bin\Debug\netcoreapp3.1\DomainLibrary.deps.json
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\DomainLibrary\bin\Debug\netcoreapp3.1\DomainLibrary.dll
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\DomainLibrary\bin\Debug\netcoreapp3.1\DomainLibrary.pdb
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\DomainLibrary\obj\Debug\netcoreapp3.1\DomainLibrary.AssemblyInfoInputs.cache
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\DomainLibrary\obj\Debug\netcoreapp3.1\DomainLibrary.AssemblyInfo.cs
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\DomainLibrary\obj\Debug\netcoreapp3.1\DomainLibrary.csproj.CoreCompileInputs.cache
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\DomainLibrary\obj\Debug\netcoreapp3.1\DomainLibrary.dll
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\DomainLibrary\obj\Debug\netcoreapp3.1\DomainLibrary.pdb
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\DomainLibrary\obj\Debug\netcoreapp3.1\DomainLibrary.csproj.AssemblyReference.cache
