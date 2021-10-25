@@ -1,9 +1,0 @@
-C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PredictionHouseDB\bin\Debug\netcoreapp3.1\PredictionHouseDB.deps.json
-C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PredictionHouseDB\bin\Debug\netcoreapp3.1\PredictionHouseDB.dll
-C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PredictionHouseDB\bin\Debug\netcoreapp3.1\PredictionHouseDB.pdb
-C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PredictionHouseDB\obj\Debug\netcoreapp3.1\PredictionHouseDB.csproj.AssemblyReference.cache
-C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PredictionHouseDB\obj\Debug\netcoreapp3.1\PredictionHouseDB.AssemblyInfoInputs.cache
-C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PredictionHouseDB\obj\Debug\netcoreapp3.1\PredictionHouseDB.AssemblyInfo.cs
-C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PredictionHouseDB\obj\Debug\netcoreapp3.1\PredictionHouseDB.csproj.CoreCompileInputs.cache
-C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PredictionHouseDB\obj\Debug\netcoreapp3.1\PredictionHouseDB.dll
-C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\PredictionHouseDB\obj\Debug\netcoreapp3.1\PredictionHouseDB.pdb

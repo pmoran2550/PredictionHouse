@@ -9,6 +9,20 @@ namespace PTM.PredictionHouseDB
 {
     public partial class Responses
     {
+        public Responses()
+        {
+
+        }
+
+        public Responses(int responseid, int questionid, int respondentid, string response, bool? correct)
+        {
+            ResponseId = responseid;
+            QuestionId = questionid;
+            RespondentId = respondentid;
+            Response = response;
+            Correct = correct;
+        }
+
         public int ResponseId { get; set; }
         public int QuestionId { get; set; }
         public int RespondentId { get; set; }
