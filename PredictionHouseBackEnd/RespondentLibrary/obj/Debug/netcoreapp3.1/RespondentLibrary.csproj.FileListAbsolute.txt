@@ -1,0 +1,14 @@
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\obj\Debug\netcoreapp3.1\RespondentLibrary.csproj.AssemblyReference.cache
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\obj\Debug\netcoreapp3.1\RespondentLibrary.AssemblyInfoInputs.cache
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\obj\Debug\netcoreapp3.1\RespondentLibrary.AssemblyInfo.cs
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\obj\Debug\netcoreapp3.1\RespondentLibrary.csproj.CoreCompileInputs.cache
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\bin\Debug\netcoreapp3.1\RespondentLibrary.deps.json
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\bin\Debug\netcoreapp3.1\RespondentLibrary.dll
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\bin\Debug\netcoreapp3.1\RespondentLibrary.pdb
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\bin\Debug\netcoreapp3.1\PHDomainLibrary.dll
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\bin\Debug\netcoreapp3.1\PredictionHouseDB.dll
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\bin\Debug\netcoreapp3.1\PHDomainLibrary.pdb
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\bin\Debug\netcoreapp3.1\PredictionHouseDB.pdb
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\obj\Debug\netcoreapp3.1\RespondentLibrary.csproj.CopyComplete
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\obj\Debug\netcoreapp3.1\RespondentLibrary.dll
+C:\Development\PredictionHouse\PredictionHouseBackEnd\PredictionHouseBackEnd\RespondentLibrary\obj\Debug\netcoreapp3.1\RespondentLibrary.pdb

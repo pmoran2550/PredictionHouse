@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BaseController.cs" />
+    <Compile Remove="QuestionsController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PredictionHouseDB\PredictionHouseDB.csproj" />
+    <ProjectReference Include="..\QuestionsLibrary\QuestionsLibrary.csproj" />
+    <ProjectReference Include="..\RespondentLibrary\RespondentLibrary.csproj" />
+    <ProjectReference Include="..\ResponsesLibrary\ResponsesLibrary.csproj" />
+  </ItemGroup>
+
+</Project>
