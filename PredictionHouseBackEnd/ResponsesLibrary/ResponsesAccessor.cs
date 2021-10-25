@@ -72,6 +72,10 @@ namespace PTM.Responses
                     await _dbContext.SaveChangesAsync();
                     addedResponse = addedR.Entity;
                 }
+                else
+                {
+                    addedResponse = null;
+                }
             }
             catch (Exception ex)
             {
