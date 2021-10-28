@@ -2,4 +2,7 @@
 *.v2
 *.config
 PredictionHouseBackEnd/.vs/
+PredictionHouseBackEnd/.vs/
 *.user
+bin/
+obj/
