@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+}
+
+.mat-header-cell {
+    color: white;
+    background-color: black;
+    font-size: 16px;
+}
+
+.mat-cell {
+    color: black;  
+    background-color: white;
+    white-space: pre;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
