@@ -12,6 +12,8 @@ import { MaterialModule } from '../shared/material.module';
 export class QuestionsComponent implements OnInit {
 
   questionsList: Questions[] = [];
+  yearsList: string[] = [];
+  selectedYear: string = "2018";
 
   displayedColumns: string[] = ['question', 'answer'];
   dataSource!: MatTableDataSource<Questions>;
@@ -21,6 +23,7 @@ export class QuestionsComponent implements OnInit {
   ngOnInit(): void {
     this.getQuestions();
     this.dataSource = new MatTableDataSource<Questions>(this.questionsList);
+    this.getYearsList();
   }
 
   getQuestions(): void {
@@ -35,5 +38,12 @@ export class QuestionsComponent implements OnInit {
         })
         this.dataSource = new MatTableDataSource<Questions>(this.questionsList);
       });
+  }
+
+  getYearsList(): void {
+    this.questionsService.getYearList()
+      .subscribe(response => {
+        this.yearsList = response.data;
+      })
   }
 }

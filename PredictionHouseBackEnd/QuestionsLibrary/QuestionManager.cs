@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PTM.PHDomain;
@@ -61,6 +62,30 @@ namespace PTM.Questions
             PredictionHouseDB.Questions question = await questionAccessor.GetQuestionByIDAsync(id);
 
             return question;
+        }
+
+        public async Task<StringListResponse> GetYearsList()
+        {
+            StringListResponse response = new StringListResponse();
+            List<string> years = new List<string>();
+
+            try
+            {
+                var questionAccessor = new QuestionAccessor(_dbContext);
+
+                years = await questionAccessor.GetYearsList();
+                response.Success = true;
+                response.Message = "";
+                response.Data = years;
+            }
+            catch (Exception ex)
+            {
+                response.Success = false;
+                response.Message = ex.Message;
+                response.Data = null;
+            }
+
+            return response;
         }
 
         public async Task<PredictionHouseDB.Questions> AddQuestion(PredictionHouseDB.Questions newQuestion)

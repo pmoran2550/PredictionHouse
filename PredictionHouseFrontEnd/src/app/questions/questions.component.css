@@ -15,3 +15,28 @@ table {
     border-bottom: 1px solid black;
     padding: 5px;
 }
+
+.mat-list {
+    color: black;
+}
+
+.mat-list-item {
+    color: black;
+}
+
+.mat-select {
+    color: black;
+}
+
+.mat-form-field {
+    color: black;
+    background-color: blue;
+}
+
+.space-grey.mat-select-panel {
+    background: rgba(101,115,126, 0.5);
+  }
+
+  .mat-select-panel {
+      color: red;
+  }

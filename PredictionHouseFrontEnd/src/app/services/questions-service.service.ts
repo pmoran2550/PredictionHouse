@@ -25,6 +25,14 @@ export class QuestionsService {
       );
   }
 
+  getYearList() {
+    return this.http.get<ApiResponse>(`${this.baseUrl}/api/questions/yearslist`)
+      .pipe(
+        tap(data => console.log(data)),
+        catchError(this.handleError)
+      );
+  }
+
   getConfigResponse(): Observable<HttpResponse<Questions>> {
     return this.http.get<Questions>(
       this.baseUrl, { observe: 'response' });

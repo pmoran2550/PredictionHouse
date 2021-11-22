@@ -3,7 +3,15 @@
     <td>{{ques | json}}</td>
 </tr> -->
 <div>
-  <H2>Year: </H2>
+  <!-- <mat-label>Year: </mat-label> -->
+  <mat-form-field appearance = fill>
+    <mat-select placeholder="YEAR: " [(ngModel)]="selectedYear" name="year">
+      <mat-option *ngFor="let year of yearsList">
+        {{year}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
 </div>
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">

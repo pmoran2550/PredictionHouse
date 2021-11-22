@@ -59,7 +59,20 @@ namespace PTM.Questions
 
             return dbQuestions;
         }
-        
+
+        public async Task<List<string>> GetYearsList()
+        {
+            List<int?> years = await _dbContext.Questions.Select(y => y.Year).Distinct().ToListAsync();
+            List<string> yearsStr = new List<string>();
+            foreach(int? year in years)
+            {
+                yearsStr.Add(year.ToString());
+            }
+            //List<string> yearsStr = ((IEnumerable<string>)years).ToList();
+
+            return yearsStr;
+        }
+
         public async Task<PredictionHouseDB.Questions> AddQuestion(PredictionHouseDB.Questions newQuestion)
         {
             PredictionHouseDB.Questions addedQ = null;

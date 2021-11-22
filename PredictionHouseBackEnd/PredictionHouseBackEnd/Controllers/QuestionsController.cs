@@ -40,6 +40,13 @@ namespace PTM.PredictionHouseBackEnd.Controllers
             return Ok(question);
         }
 
+        [HttpGet("yearslist")]
+        public async Task<ActionResult<IEnumerable<StringListResponse>>> GetYearsList()
+        {
+            var uearslist = await questionManager.GetYearsList();
+            return Ok(uearslist);
+        }
+
         [HttpPost]
         public async Task<ActionResult<PredictionHouseDB.Questions>> PostQuestion(PredictionHouseDB.Questions newQuestion)
         {
