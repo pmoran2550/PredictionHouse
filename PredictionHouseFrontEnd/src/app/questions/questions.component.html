@@ -1,16 +1,12 @@
-<!-- <p>questions works!</p> -->
-<!-- <tr *ngFor="let ques of questionsList">
-    <td>{{ques | json}}</td>
-</tr> -->
 <div>
-  <!-- <mat-label>Year: </mat-label> -->
-  <mat-form-field appearance = fill>
-    <mat-select placeholder="YEAR: " [(ngModel)]="selectedYear" name="year">
-      <mat-option *ngFor="let year of yearsList">
+  <!-- <mat-form-field appearance = fill> -->
+    <mat-label>Year: </mat-label>
+    <mat-select name="year" [(value)]="selectedYear" (selectionChange)="yearChanged($event)">
+      <mat-option   *ngFor="let year of yearsList" [value]="year">
         {{year}}
       </mat-option>
     </mat-select>
-  </mat-form-field>
+  <!-- </mat-form-field> -->
 
 </div>
 <div class="mat-elevation-z8">

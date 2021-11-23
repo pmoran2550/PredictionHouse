@@ -46,4 +46,9 @@ export class QuestionsComponent implements OnInit {
         this.yearsList = response.data;
       })
   }
+
+  yearChanged(event: any){
+    console.log(event.source.selected.value);
+  }
+
 }
