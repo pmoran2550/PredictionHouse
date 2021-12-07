@@ -22,3 +22,45 @@ h1 {
   * {
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  .mat-header-cell {
+    color: white;
+    background-color: black;
+    font-size: 16px;
+}
+
+.mat-cell {
+    color: black;  
+    background-color: white;
+    white-space: pre;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+.mat-list {
+  color: black;
+}
+
+.mat-list-item {
+  color: black;
+}
+
+.mat-form-field {
+  color: black;
+  background-color: white;
+}
+
+.mat-option {
+  color: black;
+  background-color: white;
+}
+
+.mat-option-selected {
+  color: black;
+  background-color: white;
+}
+
+:host /deep/ .mat-select-value-text {
+  color: black;
+  background-color: white;
+}

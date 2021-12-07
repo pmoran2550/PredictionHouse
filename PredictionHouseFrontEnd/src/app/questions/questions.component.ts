@@ -13,7 +13,7 @@ export class QuestionsComponent implements OnInit {
 
   questionsList: Questions[] = [];
   yearsList: string[] = [];
-  selectedYear: string = "2018";
+  selectedYear: string = "";
 
   displayedColumns: string[] = ['question', 'answer'];
   dataSource!: MatTableDataSource<Questions>;
@@ -21,7 +21,8 @@ export class QuestionsComponent implements OnInit {
   constructor(private questionsService: QuestionsService) { }
 
   ngOnInit(): void {
-    this.getQuestions();
+    this.selectedYear = this.questionsService.getSelectedYear();
+    this.getQuestionsByYear(this.selectedYear);
     this.dataSource = new MatTableDataSource<Questions>(this.questionsList);
     this.getYearsList();
   }
@@ -30,6 +31,20 @@ export class QuestionsComponent implements OnInit {
     this.questionsService.getAllQuestions()
       .subscribe(response => {
         this.questionsList = response.data;
+        this.questionsList.forEach(question => {
+          if (question != null && question.answer != null) {
+            question.answer = question.answer.replace(/;/g, "\n")
+            //question.answer.trimLeft();
+          }
+        })
+        this.dataSource = new MatTableDataSource<Questions>(this.questionsList);
+      });
+  }
+
+  getQuestionsByYear(year: string): void {
+    this.questionsService.getQuestionsByYear(year)
+      .subscribe(resp => {
+        this.questionsList = resp.data;
         this.questionsList.forEach(question => {
           if (question != null && question.answer != null) {
             question.answer = question.answer.replace(/;/g, "\n")
@@ -49,6 +64,8 @@ export class QuestionsComponent implements OnInit {
 
   yearChanged(event: any){
     console.log(event.source.selected.value);
+    this.questionsService.setSelectedYear(event.source.selected.value);
+    this.getQuestionsByYear(event.source.selected.value);
   }
 
 }

@@ -1,14 +1,12 @@
-<div>
-  <!-- <mat-form-field appearance = fill> -->
+<div class="marginTB">
     <mat-label>Year: </mat-label>
-    <mat-select name="year" [(value)]="selectedYear" (selectionChange)="yearChanged($event)">
+    <mat-select name="year" class="yearSelector" [(value)]="selectedYear" (selectionChange)="yearChanged($event)">
       <mat-option   *ngFor="let year of yearsList" [value]="year">
         {{year}}
       </mat-option>
     </mat-select>
-  <!-- </mat-form-field> -->
-
 </div>
+
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
     

@@ -26,7 +26,7 @@ namespace PTM.PredictionHouseBackEnd.Controllers
         //    return Ok(allResponses);
         //}
 
-        [HttpGet]
+        [HttpGet("respondent/{respondentid}")]
         public async Task<ActionResult<IEnumerable<ResponsesListItem>>> GetResponsesByRespondentAsync(int respondentid)
         {
             if (respondentid > 0)

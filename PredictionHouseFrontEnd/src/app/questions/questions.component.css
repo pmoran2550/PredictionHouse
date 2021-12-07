@@ -2,7 +2,7 @@ table {
     width: 100%;
 }
 
-.mat-header-cell {
+/* .mat-header-cell {
     color: white;
     background-color: black;
     font-size: 16px;
@@ -42,4 +42,14 @@ table {
 :host /deep/ .mat-select-value-text {
     color: black;
     background-color: white;
+  } */
+
+  .yearSelector {
+      width: 100px;
+      margin-left: 5px;
+  }
+
+  .marginTB {
+      margin-top: 10px;
+      margin-bottom: 10px;
   }

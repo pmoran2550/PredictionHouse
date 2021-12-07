@@ -1,5 +1,5 @@
 export interface Respondents {
-    respondentId: number;
+    respondentID: number;
     respondentName: string;
     respondentGroup: string
 }

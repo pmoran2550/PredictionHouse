@@ -14,11 +14,28 @@ import { ApiResponse } from '../contracts/apiResponse';
 export class QuestionsService {
 
   baseUrl = environment.consts.WebApiEndpoint;
+  selectedYear: string = "2018";
 
   constructor(private http: HttpClient) { }
 
+  getSelectedYear(): string {
+    return this.selectedYear;
+  }
+
+  setSelectedYear(year: string): void {
+    this.selectedYear = year;
+  }
+
   getAllQuestions(): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(`${this.baseUrl}/api/questions`)
+      .pipe(
+        tap(data => console.log(data)),
+        catchError(this.handleError)
+      );
+  }
+
+  getQuestionsByYear(year: string) {
+    return this.http.get<ApiResponse>(`${this.baseUrl}/api/questions/year/${year}`)
       .pipe(
         tap(data => console.log(data)),
         catchError(this.handleError)
