@@ -29,7 +29,6 @@ export class QuestionsService {
   getAllQuestions(): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(`${this.baseUrl}/api/questions`)
       .pipe(
-        tap(data => console.log(data)),
         catchError(this.handleError)
       );
   }
@@ -37,7 +36,6 @@ export class QuestionsService {
   getQuestionsByYear(year: string) {
     return this.http.get<ApiResponse>(`${this.baseUrl}/api/questions/year/${year}`)
       .pipe(
-        tap(data => console.log(data)),
         catchError(this.handleError)
       );
   }
@@ -45,7 +43,6 @@ export class QuestionsService {
   getYearList() {
     return this.http.get<ApiResponse>(`${this.baseUrl}/api/questions/yearslist`)
       .pipe(
-        tap(data => console.log(data)),
         catchError(this.handleError)
       );
   }

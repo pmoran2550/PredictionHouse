@@ -4,6 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { ApiResponse } from '../contracts/apiResponse';
+import { Respondents } from '../contracts/respondents';
 
 @Injectable({
   providedIn: 'root'
@@ -11,16 +12,29 @@ import { ApiResponse } from '../contracts/apiResponse';
 export class RespondentsService {
   
   baseUrl = environment.consts.WebApiEndpoint;
+  selectedRespondent: Respondents = {
+    respondentID: -1,
+    respondentName: "test",
+    respondentGroup: "none"
+  };
 
   constructor(private http: HttpClient) { }
 
   getAllRespondents(): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(`${this.baseUrl}/api/respondent`)
       .pipe(
-        tap(data => console.log(data)),
         catchError(this.handleError)
       );
   }
+
+  getSelectedRespondent(): Respondents {
+    return this.selectedRespondent;
+  }
+
+  setSelectedRespondent(respondent: Respondents): void {
+    this.selectedRespondent = respondent;
+  }
+
 
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {

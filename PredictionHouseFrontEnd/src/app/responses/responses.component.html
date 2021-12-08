@@ -1,23 +1,29 @@
 <div class="marginTB">
-    <mat-label>Respondent: {{ selectedRespondent.respondentName }}</mat-label>
-    <!-- <mat-select name="respondent" class="respondentSelector" [(value)]="selectedRespondent" 
+    <mat-label>Respondent: </mat-label>
+    <mat-select name="respondent" class="selector" [(value)]="selectedRespondent" 
     (selectionChange)="respondentChanged($event)">
       <mat-option   *ngFor="let respondent of respondentsList" [value]="respondent">
-        Respondent
+        {{ respondent.respondentName }}
       </mat-option>
-    </mat-select> -->
+    </mat-select>
 </div>
 <div class="marginTB">
-  <mat-label>Year: {{ selectedYear }}</mat-label>
+  <mat-label>Year: </mat-label>
+  <mat-select name="year" class="selector" [(value)]="selectedYear" (selectionChange)="yearChanged($event)">
+    <mat-option   *ngFor="let year of yearsList" [value]="year">
+      {{year}}
+    </mat-option>
+  </mat-select>
+
 </div>
 
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSourceResponse">
     
-      <!-- <ng-container matColumnDef="question">
+      <ng-container matColumnDef="question">
         <th mat-header-cell *matHeaderCellDef> Question </th>
-        <td mat-cell *matCellDef="let questions"> {{questions.question}} </td>
-      </ng-container> -->
+        <td mat-cell *matCellDef="let responses"> {{responses.question}} </td>
+      </ng-container>
   
       <ng-container matColumnDef="response">
         <th mat-header-cell *matHeaderCellDef> Response </th>

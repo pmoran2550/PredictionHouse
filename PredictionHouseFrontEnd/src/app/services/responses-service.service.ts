@@ -17,7 +17,6 @@ export class ResponsesService {
   getResponsesByRespondent(respondent: number): Observable<ApiResponse>{
     return this.http.get<ApiResponse>(`${this.baseUrl}/api/responses/respondent/${respondent}`)
       .pipe(
-        tap(data => console.log(data)),
         catchError(this.handleError)
       );
 

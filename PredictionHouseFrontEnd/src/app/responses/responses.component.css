@@ -6,3 +6,8 @@ table {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.selector {
+    width: 200px;
+    margin-left: 5px;
+}
