@@ -46,6 +46,7 @@ export class ResponsesComponent implements OnInit {
   respondentChanged(event: any) {
     console.log("respondent changed to " + this.selectedRespondent.respondentName);
     this.selectedRespondent = event.source.selected.value;
+    this.respondentsService.setSelectedRespondent(this.selectedRespondent);
     this.getResponses(this.selectedRespondent);
   }
 
