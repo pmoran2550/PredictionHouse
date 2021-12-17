@@ -19,7 +19,13 @@ export class ResponsesService {
       .pipe(
         catchError(this.handleError)
       );
+  }
 
+  getResponsesByYear(year: number) {
+    return this.http.get<ApiResponse>(`${this.baseUrl}/api/responses/year/${year}`)
+      .pipe(
+        catchError(this.handleError)
+      );
   }
 
   private handleError(error: HttpErrorResponse) {

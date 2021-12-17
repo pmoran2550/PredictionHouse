@@ -44,6 +44,16 @@ namespace PTM.PredictionHouseBackEnd.Controllers
             }
         }
 
+        [HttpGet("year/{year}")]
+        public async Task<ActionResult<IEnumerable<ResponsesListItem>>> GetResponsesByYearAsync(int year)
+        {
+            var respondentResponses = await responsesManager.GetResponsesByYearList(year);
+            if (respondentResponses.Success)
+                return Ok(respondentResponses);
+            else
+                return NotFound();
+        }
+
         [HttpPost]
         public async Task<ActionResult<PredictionHouseDB.Responses>> PostResponse(PredictionHouseDB.Responses newResponse)
         {

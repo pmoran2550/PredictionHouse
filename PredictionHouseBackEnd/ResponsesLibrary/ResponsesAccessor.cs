@@ -53,6 +53,27 @@ namespace PTM.Responses
             return await results.ToListAsync();
         }
 
+        public async Task<IEnumerable<ResponsesListItem>> GetResponsesByYearList(int year)
+        {
+            var query = from r in _dbContext.Responses
+                        from q in _dbContext.Questions
+                        where q.Year == 2018
+                        where r.QuestionId == q.QuestionId
+                        select r;
+
+            var results = query.Select(x =>
+                new ResponsesListItem
+                {
+                    ResponseID = x.ResponseId,
+                    RespondentID = x.RespondentId,
+                    QuestionID = x.QuestionId,
+                    Response = x.Response,
+                    Correct = x.Correct
+                });
+
+            return await results.ToListAsync();
+        }
+
         public async Task<PredictionHouseDB.Responses> AddResponseAsync(PredictionHouseDB.Responses newResponse)
         {
             PredictionHouseDB.Responses addedResponse = null;

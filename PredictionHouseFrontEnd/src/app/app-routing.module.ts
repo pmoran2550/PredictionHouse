@@ -5,13 +5,15 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { RespondentsComponent } from './respondents/respondents.component';
 import { ResponsesComponent } from './responses/responses.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  { path: 'home', component: HomeComponent},
   { path: 'questions', component: QuestionsComponent},
   { path: 'responses', component: ResponsesComponent},
   { path: 'respondents', component: RespondentsComponent},
   { path: 'about', component: AboutComponent},
-  { path: '', redirectTo: '/questions', pathMatch: 'full'},
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: '**', component: PagenotfoundComponent}
 ];
 

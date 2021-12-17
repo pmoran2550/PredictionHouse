@@ -1,0 +1,36 @@
+<div class="marginTB">
+    <mat-label>Year: </mat-label>
+    <mat-select name="year" class="selector" [(value)]="selectedYear" (selectionChange)="yearChanged($event)">
+      <mat-option   *ngFor="let year of yearsList" [value]="year">
+        {{year}}
+      </mat-option>
+    </mat-select>
+</div>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSourceResponse">
+  
+    <ng-container matColumnDef="rank">
+      <th mat-header-cell *matHeaderCellDef> Rank </th>
+      <td mat-cell *matCellDef="let homeDisplay"> {{homeDisplay.rank}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let homeDisplay"> {{homeDisplay.name}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="questions">
+      <th mat-header-cell *matHeaderCellDef> Questions </th>
+      <td mat-cell *matCellDef="let homeDisplay"> {{homeDisplay.questions}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="percentCorrect">
+      <th mat-header-cell *matHeaderCellDef> Percent Correct </th>
+      <td mat-cell *matCellDef="let homeDisplay"> {{homeDisplay.percentCorrect}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

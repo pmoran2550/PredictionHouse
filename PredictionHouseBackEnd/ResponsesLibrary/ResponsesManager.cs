@@ -54,6 +54,26 @@ namespace PTM.Responses
 
             return response;
         }
+
+        public async Task<ResponsesListResponse> GetResponsesByYearList(int year)
+        {
+            ResponsesListResponse response = new ResponsesListResponse();
+
+            try
+            {
+                var responsesAccessor = new ResponsesAccessor(_dbContext);
+                response.Data = await responsesAccessor.GetResponsesByYearList(year);
+                response.Success = true;
+            }
+            catch (Exception ex)
+            {
+                response.Success = false;
+                response.Message = ex.Message;
+            }
+
+            return response;
+        }
+
         public async Task<PredictionHouseDB.Responses> AddResponseAsync(PredictionHouseDB.Responses newResponse)
         {
             var responsesAccessor = new ResponsesAccessor(_dbContext);
