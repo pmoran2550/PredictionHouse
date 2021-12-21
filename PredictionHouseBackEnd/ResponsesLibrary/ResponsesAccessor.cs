@@ -57,7 +57,7 @@ namespace PTM.Responses
         {
             var query = from r in _dbContext.Responses
                         from q in _dbContext.Questions
-                        where q.Year == 2018
+                        where q.Year == year
                         where r.QuestionId == q.QuestionId
                         select r;
 

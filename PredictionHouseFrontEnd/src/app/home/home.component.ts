@@ -59,7 +59,9 @@ export class HomeComponent implements OnInit {
         questions: respQuestions.length,
         percentCorrect: correctPercent
       }
-      this.dataSourceResponse.data.push(hd);
+      if (hd.questions > 0) {
+        this.dataSourceResponse.data.push(hd);
+      }
     })
   }
 
@@ -86,9 +88,16 @@ export class HomeComponent implements OnInit {
 
   yearChanged(event: any) {
     this.questionsService.setSelectedYear(event.source.selected.value);
+    this.selectedYear = event.source.selected.value;
+    this.responsesService.getResponsesByYear(parseInt(this.selectedYear))
+      .subscribe(resp => {
+        this.responsesList = resp.data;
+        this.respondentsService.getAllRespondents()
+          .subscribe(r => {
+            this.respondentsList = r.data;
+            this.fillResponseTable();
+            this.sortResponseTableByCorrect();
+          })
+      })
   }
-
-  // CreateHomeTable(respList: any) {
-    
-  // }
 }
