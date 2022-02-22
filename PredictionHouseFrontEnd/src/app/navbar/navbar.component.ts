@@ -8,7 +8,6 @@ import { MyAuthService } from '../services/auth-service.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  isAuthenticated!: boolean;
 
   constructor(@Inject(DOCUMENT) public document: Document, 
   public auth:MyAuthService) { }

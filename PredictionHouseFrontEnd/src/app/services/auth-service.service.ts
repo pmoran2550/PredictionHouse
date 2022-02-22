@@ -2,6 +2,7 @@ import { Inject, Injectable, OnInit } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 import { Observable, from, Subscription } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'

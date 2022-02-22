@@ -7,12 +7,13 @@ import { RespondentsComponent } from './respondents/respondents.component';
 import { ResponsesComponent } from './responses/responses.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from '@auth0/auth0-angular';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'questions', component: QuestionsComponent},
-  { path: 'responses', component: ResponsesComponent},
-  { path: 'respondents', component: RespondentsComponent},
+  { path: 'responses', component: ResponsesComponent, canActivate: [AuthGuard]},
+  { path: 'respondents', component: RespondentsComponent, canActivate: [AuthGuard]},
   { path: 'about', component: AboutComponent},
   { path: 'login', component: LoginComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full'},
