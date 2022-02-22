@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'respondents', component: RespondentsComponent},
   { path: 'about', component: AboutComponent},
   { path: 'login', component: LoginComponent},
-  { path: '', redirectTo: '/questions', pathMatch: 'full'},
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: '**', component: PagenotfoundComponent}
 ];
 
@@ -25,8 +25,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
   constructor(private router: Router) {
-    // router.events.subscribe(res => {
-    //   console.log("ROUTING: " + res);
-    // })
   }
  }
