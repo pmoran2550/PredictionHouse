@@ -7,5 +7,10 @@
     <a mat-button routerLink="/about">About</a>
     <div class="spacer"></div>
     <a mat-button>Register</a>
-    <a mat-button>Log in</a>
+    <!-- <ng-container *ngIf="auth.isAuthenticatedObs; else loggedout"> -->
+        <a mat-button (click)="logout()">Log out</a>
+    <!-- </ng-container> -->
+    <!-- <ng-template #loggedout> -->
+        <a mat-button (click)="login()">Log in</a>
+    <!-- </ng-template> -->
 </mat-toolbar>

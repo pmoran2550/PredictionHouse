@@ -96,7 +96,9 @@ export class HomeComponent implements OnInit {
           .subscribe(r => {
             this.respondentsList = r.data;
             this.fillResponseTable();
-            this.sortResponseTableByCorrect();
+            if (this.dataSourceResponse != null && this.dataSourceResponse.data.length > 0) {
+              this.sortResponseTableByCorrect();
+            }
           })
       })
   }
