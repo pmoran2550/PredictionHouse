@@ -34,9 +34,9 @@ namespace PTM.PredictionHouseBackEnd
             })
             .AddJwtBearer(x =>
             {
-                x.Audience = "api://default";
-                //x.Authority = "http://localhost:4242";
-                //x.Audience = "predict-api";
+                x.Authority = "https://dev-aucf7wnb.us.auth0.com/";
+                x.Audience = "https://prediction-house";
+                //x.Audience = "api://default";
                 x.RequireHttpsMetadata = false;
             });
 
@@ -73,6 +73,8 @@ namespace PTM.PredictionHouseBackEnd
                 app.UseHsts();
             }
 
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseHttpsRedirection();
             app.UseCors("AllowAllHeaders");
             app.UseMvc();
