@@ -35,6 +35,8 @@ namespace PTM.PredictionHouseBackEnd
             .AddJwtBearer(x =>
             {
                 x.Audience = "api://default";
+                //x.Authority = "http://localhost:4242";
+                //x.Audience = "predict-api";
                 x.RequireHttpsMetadata = false;
             });
 

@@ -8,6 +8,7 @@ import { ResponsesComponent } from './responses/responses.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from '@auth0/auth0-angular';
+import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'respondents', component: RespondentsComponent, canActivate: [AuthGuard]},
   { path: 'about', component: AboutComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'unauthorized', component: UnauthorizedComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: '**', component: PagenotfoundComponent}
 ];
