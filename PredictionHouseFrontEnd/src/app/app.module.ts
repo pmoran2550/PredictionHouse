@@ -17,6 +17,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
+import { AddQuestionComponent } from './add-question/add-question.component';
+import { DispQuestionsComponent } from './disp-questions/disp-questions.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
     PagenotfoundComponent,
     HomeComponent,
     LoginComponent,
-    UnauthorizedComponent
+    UnauthorizedComponent,
+    AddQuestionComponent,
+    DispQuestionsComponent
   ],
   imports: [
     BrowserModule,

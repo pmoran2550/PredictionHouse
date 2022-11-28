@@ -51,6 +51,17 @@ export class QuestionsService {
     return this.http.get<Questions>(
       this.baseUrl, { observe: 'response' });
   }
+
+  setNewQuestion() {
+
+    const reqBody = {
+      "Question": "",
+      "Year": this.selectedYear,
+      "Answer": ""
+    }
+
+    return this.http.post(`${this.baseUrl}/api/questions`, reqBody)
+  }
  
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {

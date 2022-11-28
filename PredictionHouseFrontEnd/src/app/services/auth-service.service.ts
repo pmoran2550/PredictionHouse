@@ -1,4 +1,4 @@
-import { Inject, Injectable, OnInit } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 import { Observable, from, Subscription } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 
-export class MyAuthService implements OnInit {
+export class MyAuthService {
   isAuth!: Observable<boolean>;
   authUser!: Observable<any>;
 
@@ -18,11 +18,12 @@ export class MyAuthService implements OnInit {
       this.authUser = this.auth.user$;
    }
 
-   ngOnInit(): void {
-  }
-
   login(): void {
     this.auth.loginWithRedirect();
+    console.log("log data: ")
+    let res = this.auth.getAccessTokenSilently()
+      .pipe(tap(x => console.log(x)))
+      .subscribe()
   }
 
   logout() {

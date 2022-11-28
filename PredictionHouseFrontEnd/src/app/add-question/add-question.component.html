@@ -1,0 +1,38 @@
+<form [formGroup]="addQuestionForm" (ngSubmit)="onSubmit()" class="form">   
+  <label for="questionId">New Question</label>
+  <div class="form-container">
+    <mat-form-field class="fullwidth">
+      <label>Question: </label>
+      <input mat-input formControlName="question">
+    </mat-form-field>
+    <mat-form-field class="fullwidth">
+      <label for="answerId">Answer: </label>
+      <input mat-input formControlName="answer">
+    </mat-form-field>
+    <mat-form-field class="fullwidth">
+      <label for="yearId">Year: </label>
+      <input id="yearId" type="text" formControlName="year">
+    </mat-form-field>
+  </div>
+
+  <div >
+    <div >
+      <button class="btn btn-primary mr-3"
+              style="width:80px;"
+              type="submit"
+              [title]="addQuestionForm.valid ? 'Save your entered data' : 
+              'Disabled until form data is valid'"
+              [disabled]="!addQuestionForm.valid" 
+              >
+            Save
+      </button>
+      <button class="btn btn-outline-secondary mr-3"
+              style="width:80px;"
+              type="button"
+              title="Cancel your edits"
+              (click)="onCancelForm()">
+        Cancel      
+      </button>
+    </div>
+  </div>
+  </form>

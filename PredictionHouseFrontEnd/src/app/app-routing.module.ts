@@ -9,10 +9,16 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from '@auth0/auth0-angular';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
+import { AddQuestionComponent } from './add-question/add-question.component';
+import { DispQuestionsComponent } from './disp-questions/disp-questions.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
-  { path: 'questions', component: QuestionsComponent},
+  { path: 'questions', component: QuestionsComponent, 
+      children: [
+        {path: 'disp-questions', component: DispQuestionsComponent},
+        {path: 'add-questions', component: AddQuestionComponent}
+      ]},
   { path: 'responses', component: ResponsesComponent, canActivate: [AuthGuard]},
   { path: 'respondents', component: RespondentsComponent, canActivate: [AuthGuard]},
   { path: 'about', component: AboutComponent},
