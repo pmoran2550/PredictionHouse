@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MyAuthService } from '../services/auth-service.service';
 
@@ -9,12 +9,12 @@ import { MyAuthService } from '../services/auth-service.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form!: FormGroup;
+  form!: UntypedFormGroup;
   public loginInValid!: boolean;
   private formSubmitAttempt!: boolean;
   private returnUrl!: string;
 
-  constructor(private fb: FormBuilder, 
+  constructor(private fb: UntypedFormBuilder, 
     private route: ActivatedRoute, 
     private router: Router, 
     private auth: MyAuthService

@@ -7,7 +7,6 @@ import { RespondentsService } from '../services/respondents-service.service';
 import { Respondents } from '../contracts/respondents';
 import { Responses } from '../contracts/responses';
 import { MatSort, MatSortable } from '@angular/material/sort';
-import { identifierModuleUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
